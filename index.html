@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Человек-паук</title>
+  <style>
+    /* Базовые стили */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      transition: background-color 0.5s;
+    }
+    header, footer {
+      background-color: #333;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+    main {
+      padding: 1rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    h1, h2, h3 {
+      margin: 0.5rem 0;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+    a {
+      color: #3498db;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    a:hover {
+      color: #1d6fa5;
+    }
+    /* Кнопка с анимацией */
+    .btn {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+    .btn:hover {
+      background-color: #2980b9;
+      transform: scale(1.05);
+    }
+    /* Мобильная версия (ширина экрана ≤ 768px) */
+    @media (max-width: 768px) {
+      header, footer {
+        padding: 0.5rem;
+      }
+      main {
+        padding: 0.5rem;
+      }
+    }
+    /* Десктопная версия (ширина экрана ≥ 1024px) */
+    @media (min-width: 1024px) {
+      main {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Человек-паук</h1>
+    <p>Легенда комиксов Marvel</p>
+  </header>
+  
+  <main>
+    <section>
+      <h2>О персонаже</h2>
+      <article>
+        <h3>История создания</h3>
+        <p>Человек-паук – один из самых популярных супергероев, созданный Стэном Ли и Стивом Дитко. Его впервые представили в 1962 году.</p>
+      </article>
+      <article>
+        <h3>Ключевые факты</h3>
+        <ul>
+          <li>Настоящее имя: Питер Паркер</li>
+          <li>Суперспособности: сверхчеловеческая сила, ловкость и реакция</li>
+          <li>Известен своей фразой: "С большой силой приходит большая ответственность"</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Медиа и фильмы</h3>
+        <p>Для получения дополнительной информации посетите официальную страницу: <a href="https://www.marvel.com/characters/spider-man/on-screen" target="_blank">Marvel</a>.</p>
+      </article>
+      <img src="https://upload.wikimedia.org/wikipedia/en/0/0c/Spiderman50.jpg" alt="Человек-паук">
+    </section>
+    
+    <section>
+      <h2>Интерактив</h2>
+      <p>Нажмите на кнопку, чтобы изменить фон страницы:</p>
+      <button class="btn" id="changeBgBtn">Изменить фон</button>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 Мой проект на GitHub Pages</p>
+  </footer>
+  
+  <script>
+    // JavaScript для изменения цвета фона при нажатии на кнопку
+    const changeBgBtn = document.getElementById('changeBgBtn');
+    changeBgBtn.addEventListener('click', function() {
+      // Генерация случайного цвета
+      const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+      document.body.style.backgroundColor = randomColor;
+    });
+  </script>
+</body>
+</html>
